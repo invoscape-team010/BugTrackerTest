@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140808100700) do
+ActiveRecord::Schema.define(:version => 20140808111312) do
 
   create_table "bugs", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(:version => 20140808100700) do
     t.string   "priority"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
