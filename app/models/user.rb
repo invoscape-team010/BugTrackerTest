@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :bugs, dependent: :nullify
   attr_accessible :email, :name
 
   validates :name, presence: true
