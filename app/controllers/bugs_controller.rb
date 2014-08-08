@@ -34,4 +34,10 @@ class BugsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @bug = Bug.find(params[:id])
+    @bug.destroy
+    redirect_to bugs_path
+  end
 end
